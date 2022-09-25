@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+
+  test-orchestrator-root-config:
+    #    image: test-orchestrator-root-config
+    build: .
+
+    #    depends_on:
+    #      - teiler-core
+    ports:
+      - 9000:9000
+    environment:
+      IMPORT_MAP_URL: "http://host.docker.internal:8085/import-map"
+
+#  teiler-core :
+#    image: teiler-core

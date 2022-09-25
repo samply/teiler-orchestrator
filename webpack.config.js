@@ -1,6 +1,10 @@
 const { merge } = require("webpack-merge");
 const singleSpaDefaults = require("webpack-config-single-spa-ts");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const webpack = require("webpack");
+require("dotenv").config({
+  path: require("find-config")(".env"),
+});
 
 module.exports = (webpackConfigEnv, argv) => {
   const orgName = "samply";
@@ -22,6 +26,9 @@ module.exports = (webpackConfigEnv, argv) => {
           isLocal: webpackConfigEnv && webpackConfigEnv.isLocal,
           orgName,
         },
+      }),
+      new webpack.DefinePlugin({
+        "process.env": JSON.stringify(process.env),
       }),
     ],
   });
