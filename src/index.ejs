@@ -45,7 +45,7 @@
   <!-- Add your organization's prod import map URL to this script's src  -->
   <!-- <script type="systemjs-importmap" src="/importmap.json"></script> -->
 
-  <script type="systemjs-importmap" src="<%= process.env.IMPORT_MAP_URL %>"></script>
+  <script type="systemjs-importmap" src="<%= process.env.TEILER_CORE_URL + '/import-map' %>"></script>
 
   <!--
     If you need to support Angular applications, uncomment the script tag below to ensure only one instance of ZoneJS is loaded
@@ -61,6 +61,8 @@
   <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.min.js"></script>
   <% } %>
+
+  <script src="<%= process.env.TEILER_UI_URL + '/assets/env.js'%>"></script>
 
 </head>
 <body>

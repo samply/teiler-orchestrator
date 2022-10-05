@@ -11,7 +11,8 @@ services:
     ports:
       - 9000:9000
     environment:
-      IMPORT_MAP_URL: "http://host.docker.internal:8085/import-map"
+      TEILER_CORE_URL: "http://host.docker.internal:8085"
+      TEILER_UI_URL: "http://host.docker.internal:4200"
 
 #  teiler-core :
 #    image: teiler-core
