@@ -11,8 +11,9 @@ services:
     ports:
       - 9000:9000
     environment:
-      TEILER_CORE_URL: "http://host.docker.internal:8085"
-      TEILER_UI_URL: "http://host.docker.internal:4200"
+      TEILER_CORE_URL: "http://localhost:8085"
+      TEILER_UI_URL: "http://localhost:4200"
+      DEFAULT_LANGUAGE: "de"
 
 #  teiler-core :
 #    image: teiler-core

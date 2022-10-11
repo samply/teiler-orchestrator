@@ -62,7 +62,9 @@
   <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.min.js"></script>
   <% } %>
 
-  <script src="<%= process.env.TEILER_UI_URL + '/assets/env.js'%>"></script>
+  <script src="<%= process.env.TEILER_UI_URL + '/' + process.env.DEFAULT_LANGUAGE + '/assets/env.js'%>"></script>
+  <!--<script src="<%= process.env.TEILER_UI_URL + '/assets/env.js'%>"></script>-->
+
 
 </head>
 <body>
