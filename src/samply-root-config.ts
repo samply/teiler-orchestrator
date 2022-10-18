@@ -6,7 +6,10 @@ import {
 } from "single-spa-layout";
 import { generateMicrofrontendLayout } from "./microfrontend-layout";
 
-//import microfrontendLayout from "./microfrontend-layout.html";
+/*
+import microfrontendLayout from "./microfrontend-layout.html";
+startSingleSpa(microfrontendLayout);
+*/
 
 async function getTeilerUiSingleSpaLink() {
   return (await fetch(process.env.TEILER_CORE_URL + "/import-map")).json();

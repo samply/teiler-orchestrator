@@ -11,7 +11,7 @@ function generateLine(lines, singleSpaLink, language) {
   if (singleSpaLink.includes("teiler-ui")) {
     let property = isDefaultLanguage(language)
       ? "default"
-      : 'path="' + language + '"';
+      : 'path="/' + language + '"';
     lines += "<route " + property + ">";
     lines += "\t" + generateApplicationLine(singleSpaLink);
     lines += "</route>";
