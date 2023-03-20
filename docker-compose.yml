@@ -14,6 +14,7 @@ services:
       TEILER_CORE_URL: "http://localhost:8085"
       TEILER_UI_URL: "http://localhost:4200"
       DEFAULT_LANGUAGE: "de"
+      TEILER_ROOT_CONFIG_SERVER_NAME: "localhost"
 
 #  teiler-core :
 #    image: teiler-core
