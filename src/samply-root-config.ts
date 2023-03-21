@@ -1,15 +1,10 @@
-import { registerApplication, start } from "single-spa";
+import { start, registerApplication } from "single-spa";
 import {
   constructApplications,
   constructRoutes,
   constructLayoutEngine,
 } from "single-spa-layout";
 import { generateMicrofrontendLayout } from "./microfrontend-layout";
-
-/*
-import microfrontendLayout from "./microfrontend-layout.html";
-startSingleSpa(microfrontendLayout);
-*/
 
 async function getTeilerUiSingleSpaLink() {
   return (await fetch(process.env.TEILER_CORE_URL + "/import-map")).json();

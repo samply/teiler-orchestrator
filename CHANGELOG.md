@@ -19,3 +19,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Fixed
 - Show env.js of teiler-ui in html head
+- Add http relative path (compatibility with traefik)
