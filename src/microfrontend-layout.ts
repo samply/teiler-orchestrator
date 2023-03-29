@@ -11,7 +11,7 @@ function generateLine(lines, singleSpaLink, language) {
   if (singleSpaLink.includes("teiler-ui")) {
     let property = isDefaultLanguage(language)
       ? "default"
-      : 'path="/' + language + '"';
+      : 'path="' + fetchRelativePath() + language + '"';
     lines += "<route " + property + ">";
     lines += "\t" + generateApplicationLine(singleSpaLink);
     lines += "</route>";
@@ -31,4 +31,19 @@ function generateApplicationLine(singleSpaLink) {
 
 function isDefaultLanguage(language) {
   return language === process.env.DEFAULT_LANGUAGE;
+}
+
+function fetchRelativePath() {
+  let result = "";
+  if (
+    process.env.HTTP_RELATIVE_PATH &&
+    process.env.HTTP_RELATIVE_PATH.length > 0
+  ) {
+    result =
+      process.env.HTTP_RELATIVE_PATH[0] == "/"
+        ? process.env.HTTP_RELATIVE_PATH.substring(1)
+        : process.env.HTTP_RELATIVE_PATH;
+    result += "/";
+  }
+  return result;
 }
