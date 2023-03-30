@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Changed
 - Title
+- Rename developer to develop
 
 ## Fixed
 - Show env.js of teiler-ui in html head
