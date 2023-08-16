@@ -1,6 +1,6 @@
-# teiler-root-config
+# teiler-orchestrator
 Single-SPA root-config project for Teiler UI
 
 ## Docker
-docker build -t teiler-root-config .
-docker run teiler-root-config
+docker build -t teiler-orchestrator .
+docker run teiler-orchestrator
