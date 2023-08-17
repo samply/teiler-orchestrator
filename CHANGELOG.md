@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [1.0.0 - 2023-02-15]
+## [1.0.0 - 2023-08-17]
 ### Added
 - First version
 - Teiler core config
@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Multi-language support for teiler-ui
 - Generate single-spa-router from teiler-core import-map
 - Docker ignore
+- Rename Teiler Orchestrator, Teiler Dashboard and Teiler Backend
 
 ## Changed
 - Title
