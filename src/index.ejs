@@ -45,7 +45,7 @@
   <!-- Add your organization's prod import map URL to this script's src  -->
   <!-- <script type="systemjs-importmap" src="/importmap.json"></script> -->
 
-  <script type="systemjs-importmap" src="<%= process.env.TEILER_CORE_URL + '/import-map' %>"></script>
+  <script type="systemjs-importmap" src="<%= process.env.TEILER_BACKEND_URL + '/import-map' %>"></script>
 
   <!--
     If you need to support Angular applications, uncomment the script tag below to ensure only one instance of ZoneJS is loaded
@@ -63,7 +63,7 @@
   <% } %>
 
 
-  <script src="<%= process.env.TEILER_UI_URL + '/' + process.env.DEFAULT_LANGUAGE + '/assets/env.js'%>"></script>
+  <script src="<%= process.env.TEILER_DASHBOARD_URL + '/' + process.env.DEFAULT_LANGUAGE + '/assets/env.js'%>"></script>
 
 
 </head>

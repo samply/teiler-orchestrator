@@ -8,7 +8,7 @@ export function generateMicrofrontendLayout(data) {
 }
 
 function generateLine(lines, singleSpaLink, language) {
-  if (singleSpaLink.includes("teiler-ui")) {
+  if (singleSpaLink.includes("teiler-dashboard")) {
     let property = isDefaultLanguage(language)
       ? "default"
       : 'path="' + fetchRelativePath() + language + '"';
