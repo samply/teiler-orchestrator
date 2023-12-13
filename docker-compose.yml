@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+
+  test-orchestrator:
+    #    image: test-orchestrator
+    build: .
+
+    #    depends_on:
+    #      - teiler-backend
+    ports:
+      - 9000:9000
+    environment:
+      TEILER_BACKEND_URL: "http://localhost:8085"
+      TEILER_DASHBOARD_URL: "http://localhost:4200"
+      DEFAULT_LANGUAGE: "de"
+
+#  teiler-backend :
+#    image: teiler-backend
