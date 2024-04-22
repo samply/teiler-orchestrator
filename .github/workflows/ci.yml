@@ -21,6 +21,7 @@ jobs:
     with:
       # The Docker Hub Repository you want eventually push to, e.g samply/share-client
       image-name: "samply/teiler-orchestrator"
+      push-to: dockerhub
     secrets:
       DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
       DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
