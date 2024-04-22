@@ -26,6 +26,7 @@ module.exports = (webpackConfigEnv, argv) => {
           isLocal: webpackConfigEnv && webpackConfigEnv.isLocal,
           orgName,
         },
+        favicon: "src/favicon.ico"
       }),
       new webpack.DefinePlugin({
         "process.env": JSON.stringify(process.env),
