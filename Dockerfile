@@ -20,7 +20,6 @@ RUN apk add bash
 ### Configuration of NGINX
 COPY docker/nginx.conf /etc/nginx/nginx.conf
 
-
 EXPOSE 9000
 WORKDIR /usr/share/nginx/html
 COPY --from=build /app/dist .
