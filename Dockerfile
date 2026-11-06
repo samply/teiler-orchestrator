@@ -1,8 +1,8 @@
 # 1st Stage: Build project
-FROM node:alpine AS build
+FROM node:26-alpine AS build
 WORKDIR /app
 COPY package.json package-lock.json ./
-RUN npm install
+RUN npm ci
 COPY . .
 COPY docker/.env.template ./.env
 #RUN rm -f ./.env
@@ -10,7 +10,7 @@ RUN npm run build
 
 
 # 2nd Stage: Create nginx image with built project
-FROM nginx:alpine
+FROM nginx:1.30-alpine
 
 ### Install bash
 RUN apk update
