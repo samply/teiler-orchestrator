@@ -2,7 +2,11 @@
   "extends": "ts-config-single-spa",
   "files": ["src/samply-root-config.ts"],
   "compilerOptions": {
-    "declarationDir": "dist"
+    "declarationDir": "dist",
+    "moduleResolution": "bundler",
+    "rootDir": "./src",
+    "strict": false,
+    "types": ["systemjs", "webpack-env"]
   },
   "include": ["src/**/*"],
   "exclude": ["src/**/*.test*"]
