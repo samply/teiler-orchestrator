@@ -16,6 +16,9 @@ module.exports = (webpackConfigEnv, argv) => {
     webpackConfigEnv,
     argv,
     disableHtmlGeneration: true,
+    // webpack-config-single-spa >= 5 emits ES modules by default; the root config is loaded
+    // via SystemJS (System.import in index.ejs), so keep the SystemJS output format.
+    outputSystemJS: true,
   });
 
   return merge(defaultConfig, {
