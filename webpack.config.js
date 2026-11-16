@@ -103,9 +103,20 @@ module.exports = (webpackConfigEnv, argv) => {
           },
         ],
       }),
-      new webpack.DefinePlugin({
-        "process.env": JSON.stringify(process.env),
-      }),
+      // Only expose the variables the code actually uses; never embed the whole build environment.
+      new webpack.DefinePlugin(
+        Object.fromEntries(
+          [
+            "TEILER_BACKEND_URL",
+            "TEILER_DASHBOARD_URL",
+            "DEFAULT_LANGUAGE",
+            "HTTP_RELATIVE_PATH",
+          ].map((name) => [
+            `process.env.${name}`,
+            JSON.stringify(process.env[name]),
+          ]),
+        ),
+      ),
     ],
   });
 };

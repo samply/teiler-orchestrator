@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - single-spa 6, single-spa-layout 3, zone.js 0.16
 - TypeScript 6.0, webpack-cli 7, webpack-dev-server 6, ESLint 10 (flat config), Jest 30, Prettier 3, Husky 9
 - Docker: node:26-alpine (LTS), npm ci, nginx:1.30-alpine
+- Build: DefinePlugin only embeds TEILER_BACKEND_URL, TEILER_DASHBOARD_URL, DEFAULT_LANGUAGE and HTTP_RELATIVE_PATH instead of the whole build environment (process.env)
 
 ## [1.0.1 - 2025-04-24]
 ### Changed
