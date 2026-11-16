@@ -1,1 +1,1 @@
-npm exec pretty-quick --staged && npm exec concurrently npm:test npm:lint
+npx pretty-quick --staged && npx concurrently npm:test npm:lint
